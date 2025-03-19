@@ -1,0 +1,6 @@
+[run]
+source = micro_blog
+omit = 
+    tests/*
+    autoapp.py
+
