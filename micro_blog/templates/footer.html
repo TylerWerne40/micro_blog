@@ -1,14 +1,25 @@
-<footer>
-  <small>
-  <ul class="company">
-    <li>© Tyler Werne</li>
-  </ul>
-
-    <ul class="footer-nav">
-
-      <li><a href="{{ url_for('public.about') }}">About</a></li>
-
-      <li><a href="mailto:tylerwerne40@gmail.com">Contact</a></li>
-    </ul>
-  </small>
+<footer class="footer">
+  <div class="footer__content">
+    <section class="left">
+        <div class="footer_column">
+            <ul class="footer-nav">
+                <li><a href="{{ url_for('public.recent') }}">Recent</a></li>
+                <li><a href="{{ url_for('public.Calendar')}}"> Calendar</a></li>
+            </ul>
+        </div>
+    </section>
+    <section class="right"> 
+        <div class="footer_column">
+            <ul class="company">
+                <li>© Tyler Werne</li>
+            </ul>
+            
+            <ul class="footer-nav">
+                <li><a href="{{ url_for('public.about') }}">About</a></li>
+                <li><a href="{{ url_for('public.portfolio')}}"> Made by</a></li>
+                <li><a href="mailto:Tylerde Engineering@yahoo.com">Contact</a></li>
+            </ul>
+        </div>
+    </section>
+  </div>
 </footer>

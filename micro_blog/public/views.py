@@ -33,6 +33,7 @@ def home():
     current_app.logger.info("Hello from the home page!")
     # Handle logging in
     if request.method == "POST":
+        current_app.logger.info("POST")
         if form.validate_on_submit():
             login_user(form.user)
             flash("You are logged in.", "success")
@@ -75,3 +76,21 @@ def about():
     """About page."""
     form = LoginForm(request.form)
     return render_template("public/about.html", form=form)
+
+@blueprint.route("/recent/")
+def recent():
+    """About page."""
+    form = LoginForm(request.form)
+    return render_template("public/recent.html", form=form)
+    
+@blueprint.route("/portfolio/")
+def portfolio():
+    """Portfolio page."""
+    form = LoginForm(request.form)
+    return render_template("public/portfolio.html", form=form)
+    
+@blueprint.route("/Calendar/")
+def Calendar():
+    """Calendar page."""
+    form = LoginForm(request.form)
+    return render_template("public/Calendar.html", form=form)
