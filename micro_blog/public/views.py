@@ -30,8 +30,6 @@ def load_user(user_id):
 def home():
     """Home page."""
     form = LoginForm(request.form)
-    current_app.logger.info("Hello from the home page!")
-    # Handle logging in
     if request.method == "POST":
         current_app.logger.info("POST")
         if form.validate_on_submit():
