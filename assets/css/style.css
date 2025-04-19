@@ -8,6 +8,16 @@ html {
   overflow-y: scroll;
 }
 
+.navbar {
+  max-width: 640px;
+  margin: 50px auto;
+  padding: 0 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-size: 24px;
+}
+
 body {
   padding-top: 60px;
 }
@@ -53,11 +63,41 @@ footer {
   margin-top: 45px;
   padding-top: 5px;
   border-top: 1px solid #eaeaea;
-  color: #999999;
+  color: #999999; /*white*/
+  background-color: #323f43;
+  font-size: 12px;
+  flex-direction: row;
+}
+
+.footer left {
+  flex-grow: 2;
+  display: flex;
+  flex-direction: column;
+}
+
+.footer .right {
+  flex-grow: 2;
+  display: flex;
+  flex-direction: column;
 }
 
 footer a {
   color: #999999;
+}
+
+.footer__content {
+  max-width: 640px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+}
+
+.footer .left {
+  flex-grow: 2;
+}
+
+.footer .right {
+  flex-grow: 2;
 }
 
 footer p {
