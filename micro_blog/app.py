@@ -23,7 +23,7 @@ def create_app(config_object="micro_blog.settings"):
 
     :param config_object: The configuration object to use.
     """
-    app = Flask(__name__.split(".")[0], debug=True)
+    app = Flask(__name__.split(".")[0])
     app.config.from_object(config_object)
     register_extensions(app)
     register_blueprints(app)
