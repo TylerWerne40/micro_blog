@@ -28,7 +28,7 @@
     <link
       rel="stylesheet"
       type="text/css"
-      href="{{ static_url_for('static', filename='build/main_css.bundle.css') }}"
+      href="{{ url_for('static', filename='build/main_css.bundle.css') }}"
     />
 
     {% block css %}{% endblock %}
