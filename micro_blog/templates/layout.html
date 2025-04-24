@@ -57,8 +57,19 @@
       </div>
       <!-- end row -->
       {% endif %} {% endwith %} {% block content %}{% endblock %}
+    
+    <section>
+      <h1>Add new entry</h1>
+      <form class="form" method="POST">
+        <p class="form__input">
+          <label for="entry" class="form__label">Entry contents:</label>
+          <textarea name="content" id="entry" class="form__textarea"></textarea>
+        </p>
+        <button type="submit" class="form__submit">Add entry</button>
+      </form>
+    </section>
     </main>
-
+    
     {% include "footer.html" %}
 
     <!-- JavaScript at the bottom for fast page loading -->
