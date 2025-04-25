@@ -31,7 +31,8 @@ def home():
     """Home page."""
     form = LoginForm(request.form)
     if request.method == "POST":
-        current_app.logger.info("POST")
+        # TODO: CSRF token is bad, add log in logic
+        print(entry_content)
         if form.validate_on_submit():
             login_user(form.user)
             flash("You are logged in.", "success")
@@ -39,6 +40,11 @@ def home():
             return redirect(redirect_url)
         else:
             flash_errors(form)
+        isLoggenIn = False # TODO: make this work
+        if isLoggedIn:
+            current_app.logger.info("POST")
+            entry_content = request.form.get("content")
+            
     return render_template("public/home.html", form=form)
 
 
