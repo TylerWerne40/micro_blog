@@ -16,6 +16,7 @@ from micro_blog.public.forms import LoginForm
 from micro_blog.user.forms import RegisterForm
 from micro_blog.user.models import User
 from micro_blog.utils import flash_errors
+from micro_blog.app import db
 
 blueprint = Blueprint("public", __name__, static_folder="../static")
 
@@ -29,6 +30,7 @@ def load_user(user_id):
 @blueprint.route("/", methods=["GET", "POST"])
 def home():
     """Home page."""
+    entries = [e for e in app.db.entries({})]
     form = LoginForm(request.form)
     if request.method == "POST":
         # TODO: CSRF token is bad, add log in logic

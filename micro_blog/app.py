@@ -16,7 +16,10 @@ from micro_blog.extensions import (
     login_manager,
     migrate,
 )
-
+from uri_builder import mc_parser
+from pymongo import MongoClient(mc_parser("./config.txt"))
+app.db = client.microblog
+entries = []
 
 def create_app(config_object="micro_blog.settings"):
     """Create application factory, as explained here: http://flask.pocoo.org/docs/patterns/appfactories/.
