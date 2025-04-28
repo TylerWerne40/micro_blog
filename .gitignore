@@ -58,3 +58,5 @@ venv/
 
 # Development database
 *.db
+*config.txt
+*secrets.text
